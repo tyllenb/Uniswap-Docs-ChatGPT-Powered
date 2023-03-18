@@ -46,7 +46,7 @@ export default async function buildPrompt(req, res) {
     const prompt = req.body.prompt;
 
     const context = await createContext(prompt);
-    const newPrompt = `Answer the question based on the context below, and if the question can't be answered based on the context, say "I don't know"\n\nContext: ${context}\n\n---\n\nQuestion: ${prompt}\nAnswer:`;
+    const newPrompt = `Answer the question based on the context below and expand on it a bit if you can with code examples, and if the question can't be answered based on the context, say "I don't know"\n\nContext: ${context}\n\n---\n\nQuestion: ${prompt}\nAnswer:`;
 
     res.status(200).json({ prompt: newPrompt });
 }
