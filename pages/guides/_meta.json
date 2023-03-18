@@ -1,0 +1,9 @@
+{
+    "getting_a_quote": "Getting a Quote",
+    "executing_a_trade": "Executing a Trade",
+    "routing_a_swap": "Routing a Swap",
+    "minting_a_position":"Minting a Position",
+    "adding_and_removing_position":"Adding & Removing Liquidity",
+    "collecting_fees":"Collecting Fees",
+    "swapping_and_add_liquidity":"Swapping & Adding Liquidity"
+  }

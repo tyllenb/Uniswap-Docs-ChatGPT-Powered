@@ -10,6 +10,7 @@ import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown
 import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json'
 import rangeParser from 'parse-numeric-range'
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import Image from 'next/image';
 
 SyntaxHighlighter.registerLanguage('tsx', tsx)
 SyntaxHighlighter.registerLanguage('typescript', typescript)
@@ -101,7 +102,9 @@ const Modal = ({ children, open, onClose }) => {
 
 
 const questions = [
-  'How do I get started with Nextra?',
+  'How do I do a swap using Uniswap?',
+  "How do I add liquidity to Uniswap?",
+  "How do you build an app that collects fees using Uniswap?"
 ]
 
 interface EmbedbaseSearchBarProps {
@@ -282,9 +285,9 @@ const SearchModal = () => {
               paddingBottom: "0.25rem",
             }}
           >
-            <a href="https://embedbase.xyz" className="underline">
+            {/* <a href="https://embedbase.xyz" className="underline">
               Powered by Embedbase
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -293,16 +296,13 @@ const SearchModal = () => {
 };
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo:  <div style={{display:'flex'}}><img src="/uniswap.png" style={{height:'30px', marginRight:"10px"}} /><span style={{marginTop:"3px"}}>Uniswap V3 SDK</span></div>,
   project: {
-    link: 'https://github.com/another-ai/chat-gpt-powered-nextra',
+    link: 'https://github.com/Uniswap/examples',
   },
-  chat: {
-    link: 'https://discord.gg/DYE6VFTJET',
-  },
-  docsRepositoryBase: 'https://github.com/another-ai/chat-gpt-powered-nextra',
+  docsRepositoryBase: 'https://github.com/Uniswap/examples',
   footer: {
-    text: 'ChatGPT-powered QA documentation Template',
+    text: 'ChatGPT-powered Uniswap Developer Documentation',
   },
   search: {
     component: <SearchModal />
